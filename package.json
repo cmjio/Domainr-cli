@@ -1,0 +1,11 @@
+{
+  "name": "domainrcli",
+  "description": "domainr cli: A command-line application by Chris Johnson for searching for available domains.",
+  "version": "0.0.1",
+  "dependencies": {
+    "commander": "0.x",
+    "request":"0.x"
+  },
+  "preferGlobal" : true,
+  "bin" : { "domainr" : "./app.js" }
+}
