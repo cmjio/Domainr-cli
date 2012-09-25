@@ -1,7 +1,11 @@
 Domainr CLI
 ============
 
-Using Domainr CLI is simples.
+Want to search for domains in your terminal? Then using domainr cli is the tool for you. Set up is easy.  
+
+### Requirements
+
+  1. node.js installed
 	
 ### Step 1
 	git clone https://chrismj83@bitbucket.org/chrismj83/domainr-cli-nodejs.git domainr
