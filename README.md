@@ -8,7 +8,7 @@ Want to search for domains in your terminal? Then using domainr cli is the tool 
   1. node.js installed
 	
 ### Step 1
-	git clone https://chrismj83@bitbucket.org/chrismj83/domainr-cli-nodejs.git domainr
+	git clone https://github.com/edgeui/Domainr-cli.git domainr
 
 ### Step 2
 	cd domainr
