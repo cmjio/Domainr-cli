@@ -13,14 +13,14 @@ program
 	.command('query [domain]')
 	.description('Search for a given domain')
 	.action(function(domain){
-		domain(domain);
+		domainfn(domain);
 	});
 
 program
 	.command('search [domain]')
 	.description('Search for a alternatives for a given domain domain')
 	.action(function(domain){
-		search(domain);
+		searchfn(domain);
 	});
 
 program.parse(process.argv);
@@ -32,7 +32,7 @@ function author(){
 	console.log('Developer: Chris Johnson (me@cmj.io) - http://cmj.io');
 };
 
-function domain(name){
+function domainfn(name){
 	request('http://domai.nr/api/json/info?q='+name, function (error, response, body) {
 		  if (!error && response.statusCode == 200) {
 		    var json = JSON.parse(body);
@@ -57,7 +57,7 @@ function domain(name){
 		});
 };
 
-function search(domain){
+function searchfn(domain){
 	request('http://domai.nr/api/json/search?q='+domain, function (error, response, body){
 		if (!error && response.statusCode == 200) {
 			var json = JSON.parse(body);
@@ -71,7 +71,7 @@ function search(domain){
 			console.log('Choose an alternative:');
 			program.choose(alts, function(i){
 				console.log('you chose %d "%s"', i+1, json.results[i].domain);
-				domain(json.results[i].domain);
+				domainfn(json.results[i].domain);
 			});
 		}
 	});
