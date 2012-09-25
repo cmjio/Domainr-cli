@@ -70,8 +70,8 @@ function searchfn(domain){
 			}
 			console.log('Choose an alternative:');
 			program.choose(alts, function(i){
-				console.log('you chose %d "%s"', i+1, json.results[i].domain);
-				domainfn(json.results[i].domain);
+				console.log('you chose %d "%s"', i+1, alts[i]);
+				domainfn(alts[i]);
 			});
 		}
 	});
